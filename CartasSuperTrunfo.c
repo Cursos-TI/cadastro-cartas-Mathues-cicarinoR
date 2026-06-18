@@ -18,7 +18,7 @@ int main() {
   // Área para entrada de dados 
   printf("Carta-1\n");
   printf("Digite o Estado: \n");
-  scanf("%c", &Estado_1);
+  scanf("%s", &Estado_1);
   printf("Digite o Codigo da carta:\n");
   scanf("%s", Codigo_1);
   printf("Digite o nome da cidade:\n");
@@ -34,7 +34,7 @@ int main() {
 
   printf("Carta-2\n");
   printf("Digite o Estado: \n");
-  scanf("%c", &Estado_2);
+  scanf("%s", &Estado_2);
   printf("Digite o Codigo da carta:\n");
   scanf("%s", Codigo_2);
   printf("Digite o nome da cidade:\n");
