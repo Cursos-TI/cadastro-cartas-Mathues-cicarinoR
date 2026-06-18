@@ -52,8 +52,10 @@ int main() {
   float Densidade_1 = Populacao_1/Area_1, Densidade_2 = Populacao_2/Area_2;
   float RendaPerCapita_1 = Pib_1/Populacao_1, RendaPerCapita_2 = Pib_2/Populacao_2;
 
+  // Área para cálculos de Super Poder
 
-
+  float SuperPoder_1 = (Populacao_1 + Area_1 + Pib_1 + PontosTuristicos_1 + RendaPerCapita_1) + 1/Densidade_1 , SuperPoder_2 = (Populacao_2 + Area_2 + Pib_2 + PontosTuristicos_2 + RendaPerCapita_2) + 1/Densidade_2;
+  
   // Área para exibição dos dados da cidade
 
   printf("Carta 1:\n");
@@ -64,6 +66,9 @@ int main() {
   printf("Area: %.2f km²\n", Area_1);
   printf("PIB: %.2f bilhões de reais\n", Pib_1);
   printf("Numero de Pontos Turisticos: %d\n", PontosTuristicos_1);
+  printf("Densidade demografica da cidade 1: %.2f habitantes por km²\n", Densidade_1);
+  printf("Renda per capita da cidade 1: %.2f reais\n", RendaPerCapita_1);
+  printf("Super Poder da cidade 1: %.2f\n", SuperPoder_1);
 
   printf("Carta 2:\n");
   printf("Estado: %c\n", Estado_2);
@@ -73,12 +78,25 @@ int main() {
   printf("Area: %.2f km²\n", Area_2);
   printf("PIB: %.2f bilhões de reais\n", Pib_2);
   printf("Numero de Pontos Turisticos: %d\n", PontosTuristicos_2);
-  printf("Densidade demografica da cidade 1: %.2f habitantes por km²\n", Densidade_1);
   printf("Densidade demografica da cidade 2: %.2f habitantes por km²\n", Densidade_2);
-  printf("Renda per capita da cidade 1: %.2f reais\n", RendaPerCapita_1);
   printf("Renda per capita da cidade 2: %.2f reais\n", RendaPerCapita_2);
+  printf("Super Poder da cidade 2: %.2f\n", SuperPoder_2);
+
+// Área para comparação das cidades
+
+printf("comparando as cidades:\n");
+printf("Populacao: Carta 1 venceu? %u\n", Populacao_1 > Populacao_2);
+printf("Area: Carta 1 venceu? %u\n", Area_1 > Area_2);
+printf("PIB: Carta 1 venceu? %u\n", Pib_1 > Pib_2);
+printf("Pontos Turisticos: Carta 1 venceu? %u\n", PontosTuristicos_1 > PontosTuristicos_2);
+printf("Densidade demografica: Carta 2 venceu? %u\n", Densidade_1 < Densidade_2);
+printf("Renda per capita: Carta 1 venceu? %u\n", RendaPerCapita_1 > RendaPerCapita_2);
+printf("Super Poder: Carta 1 venceu? %u\n", SuperPoder_1 > SuperPoder_2);
+
+
 
   
+
 
 
 return 0;
